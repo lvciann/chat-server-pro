@@ -44,8 +44,8 @@ class ChatHandler implements URLHandler {
       }
       return this.chatHistory;
     }
-    // expect /save?name=<name>
-    else if (url.getPath().equals("/save")) {
+    // expect /save?name=<name> --done
+    else if (url.getPath().equals("/save?")) {
       String[] params = url.getQuery().split("&");
       String[] shouldBeFileName = params[0].split("=");
       if (shouldBeFileName[0].equals("name")) {
